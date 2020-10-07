@@ -98,7 +98,7 @@ header div img {
   align-self: center;
   font-size: 17px;
   line-height: 1;
-  margin: 20px;
+  margin-bottom: 15px;
   padding: 15px 20px;
   text-decoration: none;
   text-align: center;
@@ -128,7 +128,14 @@ header div img {
   padding: 5px 20px;
   font-size: 17px;
   font-weight: bold;
+  text-align: center;
   position: relative;
+  width: 160px;
+}
+
+.content-abstract-text {
+  font-size: 13px;
+  margin: 20px 0;
 }
 
 .link-download:before {
