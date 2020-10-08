@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-email-prompt',
@@ -9,18 +9,25 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class EmailPromptComponent implements OnInit {
   emailForm: FormGroup;
+
   constructor(
     private fb: FormBuilder,
     private router: Router,
   ) { }
 
+  get email() {
+    return this.emailForm.get('email');
+  }
+
   onSubmit() {
-    this.router.navigate(['/upcoming']);
+    if (!this.email.invalid) {
+      this.router.navigate(['/upcoming']);
+    }
   }
 
   ngOnInit(): void {
     this.emailForm = this.fb.group({
-      email: ['', Validators.required],
+      email: ['', [Validators.compose([Validators.required, Validators.email])]],
     });
   }
 }

@@ -1,5 +1,5 @@
 .wrapper {
-  margin: 50px auto 0;
+  margin: 70px auto 0;
   width: max-content;
 }
 .form {
@@ -15,6 +15,12 @@
     display: block;
     font-weight: bold;
     font-size: 14px;
+  }
+  &-error {
+    margin-top: 8px;
+    display: block;
+    font-size: 12px;
+    color: #962C39;
   }
   flex: 1;
   padding: 0 10px;

@@ -9,7 +9,15 @@
         placeholder="Email Address"
         formControlName="email"
       >
-      <button type="submit" class="btn-submit">Submit</button>
+      <button
+        [disabled]="email.invalid"
+        (click)="onSubmit()" type="submit" class="btn-submit"
+      >
+        Submit
+      </button>
     </div>
+    <span  *ngIf="email.invalid && email.dirty" class="input-error">
+      Incorrect email value
+    </span>
   </form>
 </div>
