@@ -1,0 +1,32 @@
+.wrapper {
+  margin: 50px auto 0;
+  width: max-content;
+}
+.form {
+  width: 370px;
+}
+.input {
+  &-box {
+    margin-top: 4px;
+    height: 35px;
+    display: flex;
+  }
+  &-label {
+    display: block;
+    font-weight: bold;
+  }
+  flex: 1;
+  padding: 0 10px;
+  font-size: 15px;
+  font-family: inherit;
+  border: 1px solid #cfcfcf;
+  border-right: none;
+}
+.btn-submit {
+  background: #4F98E5;
+  color: #ffffff;
+  cursor: pointer;
+  width: 70px;
+  font-size: 14px;
+  height: 100%;
+}
