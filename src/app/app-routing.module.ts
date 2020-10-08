@@ -5,7 +5,7 @@ import { EventsComponent } from './events/events.component';
 
 const routes: Routes = [
   { path: '', component: EmailPromptComponent },
-  { path: 'upcoming', component: EventsComponent },
+  { path: 'event', component: EventsComponent },
   { path: '**', pathMatch: 'full', component: EmailPromptComponent }
 ];
 
