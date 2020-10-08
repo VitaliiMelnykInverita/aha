@@ -36,4 +36,7 @@
   width: 70px;
   font-size: 14px;
   height: 100%;
+  &:disabled {
+    cursor: default;
+  }
 }
