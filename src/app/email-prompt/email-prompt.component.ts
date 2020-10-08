@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-email-prompt',
@@ -9,12 +10,12 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class EmailPromptComponent implements OnInit {
   emailForm: FormGroup;
   constructor(
-    public fb: FormBuilder,
-  ) {
-  }
+    private fb: FormBuilder,
+    private router: Router,
+  ) { }
 
   onSubmit() {
-    console.log('submit yee')
+    this.router.navigate(['/upcoming']);
   }
 
   ngOnInit(): void {
